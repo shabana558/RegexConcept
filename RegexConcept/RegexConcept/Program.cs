@@ -12,9 +12,20 @@ namespace RegexConcept
         static void Main(string[] args)
         {
             ValidateThreeConsequativeCharacter();
+            Console.WriteLine();
+            ValidatePinCode();
             Console.ReadLine();
 
         }
+        public static void ValidatePinCode()
+        {
+            Console.WriteLine("ValidatePinCode");
+            string[] inputs = { "400088", "9342 387", "A834  784", "632  787B", "A83 4784", "A400088", "400088B", "400 088" };
+            string Pattern = "^[0-9]{3}[  ][0-9]{3}$";
+            IterativeOverLoop(inputs, Pattern);
+        }
+
+
         public static void ValidateThreeConsequativeCharacter()
         {
             Console.WriteLine("ValidateThreeConsequativeCharacters");
